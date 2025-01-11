@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="top_bar">
+        <div class="top_bar_left">
+          <h2 class="logo">BZ</h2>
+        </div>
+
+        <div class="top_bar_right">
+          <p class="top_links post">Post your product</p>
+          <p class="top_links buy">Buy Products</p>
+          <p class="kart top_links">Kart</p>
+          <p class="top_links balance">Your Balance</p>
+        </div>
+      </div>
+      <div class="page_title">
+        <h1>Buy and Sell Products</h1>
+      </div>
+      <div class="content">
+        <div class="new_box hide">
+          <button class="back_button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <h3>Add your product</h3>
+          <input type="text" id="img_product" placeholder="Add Img URL" />
+          <input type="text" id="heading_product" placeholder="Heading" />
+          <textarea id="text_product" placeholder="Add description"></textarea>
+          <input type="number" id="new_box_price" name="price" placeholder="Add Price">
+          <button class="add_new_box">Add my product</button>
+        </div>
+        
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eAqxljTteybiscbJymwvzUIgJKvl-zF6bw&s"
+            alt="Shoe 1"
+            class="product-image"
+          />
+          <h3 class="product-title">Sneakers X1</h3>
+          <p class="product-description">
+            Comfortable sneakers for everyday wear.
+          </p>
+          <div class="product-rating">
+            <span>⭐⭐⭐⭐☆</span>
+          </div>
+          <p class="product-price">$45.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22nm1AL7G207bnzEUwxXYBHooyCXYKbd2Gg&s"
+            alt="Shoe 2"
+            class="product-image"
+          />
+          <h3 class="product-title">Running Shoes</h3>
+          <p class="product-description">
+            Lightweight running shoes for athletes.
+          </p>
+          <div class="product-rating">
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <p class="product-price">$55.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRm6CpIM30grJxmu6rDyxYCAtLrATI7Yrh6g&s"
+            alt="Bag 1"
+            class="product-image"
+          />
+          <h3 class="product-title">Leather Backpack</h3>
+          <p class="product-description">
+            Stylish leather backpack for work or travel.
+          </p>
+          <div class="product-rating">
+            <span>⭐⭐⭐⭐☆</span>
+          </div>
+          <p class="product-price">$65.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhl_uYFGDyrHeVkUHLx5dLQcqucpx_h1s-FQ&s"
+            alt="Bag 2"
+            class="product-image"
+          />
+          <h3 class="product-title">Canvas Tote Bag</h3>
+          <p class="product-description">
+            Eco-friendly tote bag for daily use.
+          </p>
+          <div class="product-rating">
+            <span>⭐⭐⭐⭐☆</span>
+          </div>
+          <p class="product-price">$30.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
