@@ -72,28 +72,22 @@ addNewBox.addEventListener("click", () => {
 const kart = document.querySelector(".kart");
 const buy = document.querySelector(".buy");
 const kartContent = document.querySelector(".kart_content");
-const payment = document.querySelector(".payment"); // Ensure payment section is selected
+const payment = document.querySelector(".payment");
 
 kart.addEventListener("click", () => {
   content.classList.add("hide_content");
   kartContent.style.display = "block";
 });
 
-let productClass = "";
-kart.addEventListener("click", () => {
-  content.classList.add("hide_content");
-  kartContent.classList.remove("kart_hide");
-});
+
 
 buy.addEventListener("click", () => {
   kartContent.style.display = "none";
   content.classList.remove("hide_content");
 
-  // Ensure payment modal is shown
   payment.classList.remove("hide_payment");
 });
 
-// Add product to cart and show cart contents
 const addToKartButtons = document.querySelectorAll(".add-to-cart");
 addToKartButtons.forEach((button) => {
   button.addEventListener("click", function () {
