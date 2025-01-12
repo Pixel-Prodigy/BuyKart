@@ -97,9 +97,10 @@ buy.addEventListener("click", () => {
 });
 const addToKartButtons = document.querySelectorAll(".add-to-cart");
 addToKartButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         const classes = this.classList;
         const classList = [...classes];
+        let productClass = '';
         for (const i of classList) {
             if (i !== "add_to_cart") {
                 productClass = i;
@@ -108,12 +109,42 @@ addToKartButtons.forEach(button => {
         const addDiv = document.getElementsByClassName(productClass)[0];
         const parentOfButton = addDiv.parentElement;
         const cloneParent = parentOfButton.cloneNode(true);
+
+        const removeFromKart = document.createElement('button');
+        removeFromKart.classList.add('remove_from_kart');
+        removeFromKart.innerHTML = (`
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        `);
+        cloneParent.appendChild(removeFromKart);
         kartContent.appendChild(cloneParent);
-        const kartHeading = document.querySelector(".kart_heading")
-        kartHeading.style.display = "none"
-        this.classList.add("product_added")
-        this.textContent = ('Added')
-        cloneParent.classList.add("kart_product_style")
+
+        const kartHeading = document.querySelector(".kart_heading");
+        kartHeading.style.display = "none";
+
+        this.classList.add("product_added");
+        this.textContent = 'Added';
+        cloneParent.classList.add("kart_product_style");
+
+        const buttonAdv = cloneParent.querySelector("button");
+        buttonAdv.textContent = 'Buy Now';
+
+
+        removeFromKart.addEventListener("click", function () {
+            cloneParent.remove(); 
+
+            button.classList.remove("product_added");
+            button.textContent = "Add to Cart";
+
+            if (kartContent.children.length === 0) {
+                kartHeading.style.display = "block";
+            }
+        });
     });
 });
+
+
+
+
 

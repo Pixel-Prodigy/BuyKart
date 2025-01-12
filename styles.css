@@ -304,3 +304,21 @@ svg {
 .kart_hide {
   display: none;
 }
+.kart_product_style button{
+background-color: rgb(11, 220, 4);
+font-weight: 700;
+}
+.kart_product_style .remove_from_kart{
+  position: absolute;
+  background-color: red;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  width: 50px;
+  top: 100;
+  margin-left: 60px;
+}
+.remove_from_kart svg{
+  height: 30px;
+  stroke-width: 3;
+}
