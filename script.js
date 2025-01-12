@@ -75,7 +75,7 @@ const kartContent = document.querySelector(".kart_content");
 const payment = document.querySelector(".payment");
 
 kart.addEventListener("click", () => {
-  content.classList.add("hide_content");
+  content.style.display = "none";
   kartContent.style.display = "block";
 });
 
@@ -83,8 +83,7 @@ kart.addEventListener("click", () => {
 
 buy.addEventListener("click", () => {
   kartContent.style.display = "none";
-  content.classList.remove("hide_content");
-
+  content.style.display = "grid";
   payment.classList.remove("hide_payment");
 });
 

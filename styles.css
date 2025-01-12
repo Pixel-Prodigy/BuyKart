@@ -20,7 +20,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 60px;
+  height: 80px;
   background: rgba(188, 202, 237, 0.3);
   backdrop-filter: blur(6px);
   color: white;
@@ -93,10 +93,11 @@ body {
   display: grid;
   z-index: 1;
   min-height: 100vh;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(auto-fill, 620px);
   gap: 20px;
   padding: 40px;
-  justify-items: center;
+
 }
 .product {
   background: linear-gradient(to bottom right, #0d1b2a, #1b2a49, #3a4a69);
@@ -247,6 +248,8 @@ svg {
 .kart_content {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  justify-content: end;
   box-sizing: border-box;
   gap: 16px;
   padding: 16px;
@@ -340,7 +343,14 @@ svg {
   height: 0;
   transition: height 0.5s ease, opacity 0.3s ease, visibility 0s 0.3s;
 }
-
+@media (max-width: 460px){
+  .product{
+    width: 320px;
+  }
+  .top_bar_right{
+    gap: 10px;
+  }
+}
 @media (max-width: 510px) {
   .app {
     width: 100%;
@@ -363,9 +373,9 @@ svg {
   #new_box_price {
     width: 240px;
   }
-#heading_product{
-  width: 240px;
-}
+  #heading_product {
+    width: 240px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -402,5 +412,9 @@ svg {
   .app {
     max-width: 1440px;
     margin: 0 auto;
+  }
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
